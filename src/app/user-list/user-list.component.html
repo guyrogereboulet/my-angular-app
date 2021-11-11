@@ -1,0 +1,20 @@
+<p>user-list works!</p>
+<ul>
+  <!-- Con *ngFor facciamo un forEach di ogni lemento presente nell'array user -->
+  <li *ngFor="let user of users">{{ user }}</li>
+
+  <!-- <li>{{ users[0] }}</li>
+  <li>{{ users[1] }}</li>
+  <li>{{ users[2] }}</li>
+  <li>{{ users[3] }}</li> -->
+</ul>
+<hr />
+<h2>Passare i dati da un componente</h2>
+<ul>
+  <li *ngFor="let user of users">
+    <!-- [name] è la propietà del decoratore Input -->
+    <app-user-item [name]="user"></app-user-item>
+  </li>
+</ul>
+<!-- <app-user-item></app-user-item>
+<app-user-item></app-user-item> -->
